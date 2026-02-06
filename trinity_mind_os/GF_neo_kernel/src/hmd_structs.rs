@@ -1,3 +1,4 @@
+#![allow(non_camel_case_types)]
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use uuid::Uuid;
@@ -92,6 +93,96 @@ impl HexCell {
                 why: why.to_string(),
                 refs: vec!["HEXAD_MATH_MODEL.md".to_string()],
             },
+        }
+    }
+}
+
+// 5. Phase Detector (The Clock)
+pub struct PhaseDetector;
+
+impl PhaseDetector {
+    // Detects the current phase based on the "Universal Clock" (System Time)
+    // In a real system, this would be based on project state or user intent.
+    pub fn detect_now() -> Phase {
+        let now = Utc::now().timestamp();
+        // 13-Phase Cycle (Simple Modulo for dynamic simulation)
+        match now % 13 {
+            0 => Phase::CE_Plus,
+            1 => Phase::CE_Zero,
+            2 => Phase::CE_Minus,
+            3 => Phase::AQ_Plus,
+            4 => Phase::AQ_Zero,
+            5 => Phase::AQ_Minus,
+            6 => Phase::GF_Plus,
+            7 => Phase::GF_Zero,
+            8 => Phase::GF_Minus,
+            9 => Phase::HM_Plus,
+            10 => Phase::HM_Zero,
+            11 => Phase::HM_Minus,
+            12 => Phase::SR0_Commit,
+            _ => Phase::SR0_Commit, // Fallback
+        }
+    }
+
+    pub fn phase_to_string(phase: &Phase) -> String {
+        match phase {
+            Phase::CE_Plus => "CE+ (Ignition)".to_string(),
+            Phase::CE_Zero => "CE° (Definition)".to_string(),
+            Phase::CE_Minus => "CE- (Reduction)".to_string(),
+            Phase::AQ_Plus => "AQ+ (Action)".to_string(),
+            Phase::AQ_Zero => "AQ° (Flow)".to_string(),
+            Phase::AQ_Minus => "AQ- (Debug)".to_string(),
+            Phase::GF_Plus => "GF+ (Blueprint)".to_string(),
+            Phase::GF_Zero => "GF° (Normalize)".to_string(),
+            Phase::GF_Minus => "GF- (Guardrail)".to_string(),
+            Phase::HM_Plus => "HM+ (Narrative)".to_string(),
+            Phase::HM_Zero => "HM° (Meaning)".to_string(),
+            Phase::HM_Minus => "HM- (Proof)".to_string(),
+            Phase::SR0_Commit => "SR₀ (Genesis)".to_string(),
+        }
+    }
+}
+
+// 6. Hexad Router (The Logic)
+// "The neural network that decides where a memory belongs."
+pub struct HexadRouter;
+
+impl HexadRouter {
+    pub fn route(payload_str: &str) -> CouplingIdentity {
+        let content = payload_str.to_lowercase();
+        
+        // Simple keyword-based routing (Phase 1 Logic)
+        if content.contains("action") || content.contains("run") || content.contains("fast") || content.contains("flow") {
+            return CouplingIdentity::CEAQ; // Ignition -> Acceleration
+        }
+        if content.contains("struct") || content.contains("logic") || content.contains("code") || content.contains("system") {
+            return CouplingIdentity::AQGF; // Execution -> Structure
+        }
+        if content.contains("idea") || content.contains("vision") || content.contains("concept") || content.contains("dream") {
+            return CouplingIdentity::CEGF; // Creation -> Structure (Blueprint)
+        }
+        if content.contains("story") || content.contains("user") || content.contains("meaning") || content.contains("why") {
+            return CouplingIdentity::GFHM; // Structure -> Meaning
+        }
+        if content.contains("people") || content.contains("love") || content.contains("emotion") || content.contains("soul") {
+             return CouplingIdentity::AQHM; // Action -> Meaning
+        }
+        if content.contains("art") || content.contains("muse") || content.contains("magic") || content.contains("god") {
+             return CouplingIdentity::CEHM; // Creation -> Meaning
+        }
+
+        // Default to Genesis Coupling (Convergence) if unsure
+        CouplingIdentity::AQGF 
+    }
+
+    pub fn explain_route(id: &CouplingIdentity) -> String {
+        match id {
+            CouplingIdentity::CEAQ => "CE->AQ: Accelerating Idea into Action".to_string(),
+            CouplingIdentity::CEGF => "CE->GF: Structuring Abstract Intent".to_string(),
+            CouplingIdentity::CEHM => "CE->HM: Finding Meaning in Creation".to_string(),
+            CouplingIdentity::AQGF => "AQ->GF: Systemizing Execution".to_string(),
+            CouplingIdentity::AQHM => "AQ->HM: Humanizing Action".to_string(),
+            CouplingIdentity::GFHM => "GF->HM: Intepreting Structure".to_string(),
         }
     }
 }
