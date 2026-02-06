@@ -1,0 +1,273 @@
+{
+  "standard": "trinity-13phase",
+  "version": "1.0",
+  "created_at": "2026-02-03T16:05:16",
+  "agreements": {
+    "HM0_mapping": "Spoon Boy",
+    "SR0_mapping": "Architect + Deus (System Reboot Node)"
+  },
+  "phases": [
+    {
+      "id": "P01",
+      "index": 1,
+      "phase": "CE+",
+      "core": "CE",
+      "ko": "점화",
+      "purpose": "시작의 불꽃, 의도 발화",
+      "dod": [
+        "문제/비전 1문장 확정",
+        "목표 3줄(왜/무엇/누구)",
+        "성공 조건 1개(측정 가능)"
+      ],
+      "color_hsl": {
+        "h": 0,
+        "s": 88,
+        "l": 56
+      },
+      "matrix_mapping": "Neo",
+      "icon_token": "t13_ce_plus_ignite"
+    },
+    {
+      "id": "P02",
+      "index": 2,
+      "phase": "CE0",
+      "core": "CE",
+      "ko": "명료",
+      "purpose": "신호 정제, 방향 확정",
+      "dod": [
+        "핵심 가설 1개",
+        "범위 경계(포함/제외)",
+        "KPI/성공 기준 1~3개"
+      ],
+      "color_hsl": {
+        "h": 0,
+        "s": 78,
+        "l": 48
+      },
+      "matrix_mapping": "Morpheus",
+      "icon_token": "t13_ce_zero_clarify"
+    },
+    {
+      "id": "P03",
+      "index": 3,
+      "phase": "CE-",
+      "core": "CE",
+      "ko": "씨앗",
+      "purpose": "본질 구조 추출(블루프린트)",
+      "dod": [
+        "IA/스키마 초안 1장",
+        "핵심 객체/모듈 3~7개",
+        "최소 사용자 흐름 1개"
+      ],
+      "color_hsl": {
+        "h": 0,
+        "s": 68,
+        "l": 40
+      },
+      "matrix_mapping": "Trinity",
+      "icon_token": "t13_ce_minus_seed"
+    },
+    {
+      "id": "P04",
+      "index": 4,
+      "phase": "AQ+",
+      "core": "AQ",
+      "ko": "인사이트",
+      "purpose": "외부 지식 유입, 리서치 확장",
+      "dod": [
+        "레퍼런스 10개",
+        "인사이트 5개",
+        "벤치마크 1개(비교표)"
+      ],
+      "color_hsl": {
+        "h": 110,
+        "s": 88,
+        "l": 56
+      },
+      "matrix_mapping": "Tank",
+      "icon_token": "t13_aq_plus_insight"
+    },
+    {
+      "id": "P05",
+      "index": 5,
+      "phase": "AQ0",
+      "core": "AQ",
+      "ko": "공명",
+      "purpose": "패턴 인식, 연결점 포착",
+      "dod": [
+        "클러스터 3~5개",
+        "우선순위 Top3",
+        "결정 근거 3줄"
+      ],
+      "color_hsl": {
+        "h": 110,
+        "s": 78,
+        "l": 48
+      },
+      "matrix_mapping": "Seraph",
+      "icon_token": "t13_aq_zero_resonate"
+    },
+    {
+      "id": "P06",
+      "index": 6,
+      "phase": "AQ-",
+      "core": "AQ",
+      "ko": "합성",
+      "purpose": "모델 통합, 프레임워크화",
+      "dod": [
+        "프레임워크 1장(그림/표)",
+        "실행 계획(주/일 단위)",
+        "리스크 3개+대응"
+      ],
+      "color_hsl": {
+        "h": 110,
+        "s": 68,
+        "l": 40
+      },
+      "matrix_mapping": "Niobe",
+      "icon_token": "t13_aq_minus_synthesize"
+    },
+    {
+      "id": "P07",
+      "index": 7,
+      "phase": "GF+",
+      "core": "GF",
+      "ko": "기준점",
+      "purpose": "현실 접지, 요구사항 고정(PRD)",
+      "dod": [
+        "PRD v1(목표/범위/유저/가치)",
+        "제약(시간/비용/정책)",
+        "의존성/리스크"
+      ],
+      "color_hsl": {
+        "h": 190,
+        "s": 88,
+        "l": 56
+      },
+      "matrix_mapping": "Oracle",
+      "icon_token": "t13_gf_plus_anchor"
+    },
+    {
+      "id": "P08",
+      "index": 8,
+      "phase": "GF0",
+      "core": "GF",
+      "ko": "구조화",
+      "purpose": "시스템 설계(아키텍처/플로우)",
+      "dod": [
+        "아키텍처 다이어그램",
+        "API/DB 초안",
+        "컴포넌트 분해(WBS)"
+      ],
+      "color_hsl": {
+        "h": 190,
+        "s": 78,
+        "l": 48
+      },
+      "matrix_mapping": "Sati",
+      "icon_token": "t13_gf_zero_structure"
+    },
+    {
+      "id": "P09",
+      "index": 9,
+      "phase": "GF-",
+      "core": "GF",
+      "ko": "구현",
+      "purpose": "개발·테스트·작동(물질화)",
+      "dod": [
+        "동작하는 MVP",
+        "테스트 결과(최소 5케이스)",
+        "실행/배포 방법 1페이지"
+      ],
+      "color_hsl": {
+        "h": 190,
+        "s": 68,
+        "l": 40
+      },
+      "matrix_mapping": "Agent Smith",
+      "icon_token": "t13_gf_minus_implement"
+    },
+    {
+      "id": "P10",
+      "index": 10,
+      "phase": "HM+",
+      "core": "HM",
+      "ko": "공감",
+      "purpose": "인간 맥락 결합(UX/서사/톤)",
+      "dod": [
+        "UX 플로우(핵심 1~3)",
+        "카피/메시지 10줄",
+        "톤&매너 5규칙"
+      ],
+      "color_hsl": {
+        "h": 270,
+        "s": 88,
+        "l": 56
+      },
+      "matrix_mapping": "Zion Council",
+      "icon_token": "t13_hm_plus_empathy"
+    },
+    {
+      "id": "P11",
+      "index": 11,
+      "phase": "HM0",
+      "core": "HM",
+      "ko": "성찰(스푼보이)",
+      "purpose": "관점 재정렬·내면 정렬",
+      "dod": [
+        "회고/리뷰(무엇/왜/다음)",
+        "리프레임 문장 1~3개",
+        "개선안 Top3(결정 포함)"
+      ],
+      "color_hsl": {
+        "h": 270,
+        "s": 78,
+        "l": 48
+      },
+      "matrix_mapping": "Spoon Boy",
+      "icon_token": "t13_hm_zero_reflect"
+    },
+    {
+      "id": "P12",
+      "index": 12,
+      "phase": "HM-",
+      "core": "HM",
+      "ko": "초월",
+      "purpose": "완결·배포·전환(릴리즈)",
+      "dod": [
+        "릴리즈 노트",
+        "배포 체크리스트",
+        "롤백 플랜"
+      ],
+      "color_hsl": {
+        "h": 270,
+        "s": 68,
+        "l": 40
+      },
+      "matrix_mapping": "Mifune",
+      "icon_token": "t13_hm_minus_transcend"
+    },
+    {
+      "id": "P13",
+      "index": 13,
+      "phase": "SR0",
+      "core": "SR0",
+      "ko": "영점",
+      "purpose": "루프 완결·재부팅(시스템 리셋)",
+      "dod": [
+        "prod_deployed",
+        "payment_ok",
+        "monitoring_ok",
+        "retro_written",
+        "next_loop_goal_created"
+      ],
+      "color_hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 98
+      },
+      "matrix_mapping": "Architect + Deus",
+      "icon_token": "t13_sr0_zero_point"
+    }
+  ]
+}

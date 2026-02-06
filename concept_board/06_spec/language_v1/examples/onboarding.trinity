@@ -1,0 +1,44 @@
+/* 
+  Title: Onboarding Feedback Loop
+  Version: 1.0.0
+*/
+
+CAPSULE UserOnboarding {
+
+    // [CE] Creative Energy: 의도의 점화
+    // 이 코드가 '왜' 존재하는지 먼저 선언합시다.
+    IGNITE StartOnboarding {
+        WHY "New users are confused about the first step."
+        GOAL Increase "RetentionRate" BY "15%"
+    }
+
+    // [AQ] Active Quantum: 외부 연결 및 흐름
+    // 사용자 입력이 어디로 흘러가는지 보여줍니다.
+    FLOW InputFlow FROM UserInput TO System {
+        IMPORT UserProfile FROM "auth-service"
+        VIA ValidateInput
+    }
+
+    // [GF] Gravity Field: 현실적 구조체
+    // 변경 불가능한 단단한 데이터 구조를 정의합니다.
+    ANCHOR FeedbackForm {
+        FIELD userId: String
+        FIELD rating: Number
+        FIELD comment: Text
+        
+        // 물리적 제약조건 (유효성 검사)
+        CONSTRAINT "rating must be between 1 and 5"
+        CONSTRAINT "comment length < 500"
+    }
+
+    // [HM] Human Mind: 의미와 경험
+    // 기계적 처리가 끝난 후, 사람에게 어떤 느낌을 줄 것인가?
+    RESONATE ThankYouMessage {
+        VIBE "Warm, Encouraging, Professional"
+        
+        MESSAGE "Thank you, ${UserProfile.name}! Your voice matters."
+        
+        // 최종적으로 사용자에게 전달되는 것
+        EMIT FeedbackForm
+    }
+}

@@ -1,0 +1,16 @@
+# System
+.DS_Store
+
+# Node
+node_modules/
+dist/
+build/
+.env
+.env.local
+
+# Rust
+target/
+**/*.rs.bk
+
+# Trinity Artifacts
+# (We might want to keep artifacts, but excluding temp ones)

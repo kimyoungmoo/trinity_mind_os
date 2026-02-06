@@ -1,0 +1,179 @@
+{
+    "matrix_version": "1.0.0",
+    "total_forms": 169,
+    "guardians": [
+        {
+            "id": "G01",
+            "phase": "P01_CE+",
+            "base_name": "Volt-Zen",
+            "archetype": "The Igniter",
+            "attribute": "Fire (🔥)"
+        },
+        {
+            "id": "G02",
+            "phase": "P02_CE0",
+            "base_name": "Volt-Focus",
+            "archetype": "The Mentor",
+            "attribute": "Fire (🔥)"
+        },
+        {
+            "id": "G03",
+            "phase": "P03_CE-",
+            "base_name": "Volt-Seed",
+            "archetype": "The Blueprint Maker",
+            "attribute": "Fire (🔥)"
+        },
+        {
+            "id": "G04",
+            "phase": "P04_AQ+",
+            "base_name": "Insight-Diver",
+            "archetype": "Researcher",
+            "attribute": "Insight (🌿)"
+        },
+        {
+            "id": "G05",
+            "phase": "P05_AQ0",
+            "base_name": "Echo-Linker",
+            "archetype": "Resonator",
+            "attribute": "Insight (🌿)"
+        },
+        {
+            "id": "G06",
+            "phase": "P06_AQ-",
+            "base_name": "Synth-Maker",
+            "archetype": "Modeler",
+            "attribute": "Insight (🌿)"
+        },
+        {
+            "id": "G07",
+            "phase": "P07_GF+",
+            "base_name": "Ground-Anchor",
+            "archetype": "Analyst",
+            "attribute": "Standard (🌊)"
+        },
+        {
+            "id": "G08",
+            "phase": "P08_GF0",
+            "base_name": "Struct-Architect",
+            "archetype": "Engineer",
+            "attribute": "Standard (🌊)"
+        },
+        {
+            "id": "G09",
+            "phase": "P09_GF-",
+            "base_name": "Core-Builder",
+            "archetype": "Implementor",
+            "attribute": "Standard (🌊)"
+        },
+        {
+            "id": "G10",
+            "phase": "P10_HM+",
+            "base_name": "Heart-Speaker",
+            "archetype": "UX/Story",
+            "attribute": "Empathy (💜)"
+        },
+        {
+            "id": "G11",
+            "phase": "P11_HM0",
+            "base_name": "Spoon-Kid",
+            "archetype": "Reflector",
+            "attribute": "Empathy (💜)"
+        },
+        {
+            "id": "G12",
+            "phase": "P12_HM-",
+            "base_name": "Trans-Knight",
+            "archetype": "Releaser",
+            "attribute": "Empathy (💜)"
+        },
+        {
+            "id": "G13",
+            "phase": "P13_SR0",
+            "base_name": "Deus-Architect",
+            "archetype": "Rebooter",
+            "attribute": "Zero (⚪)"
+        }
+    ],
+    "tiers": [
+        {
+            "rank": "01",
+            "name": "Proto",
+            "meaning": "Awakening"
+        },
+        {
+            "rank": "02",
+            "name": "Spark",
+            "meaning": "Skill Activation"
+        },
+        {
+            "rank": "03",
+            "name": "Focus",
+            "meaning": "Core Awakening"
+        },
+        {
+            "rank": "04",
+            "name": "Flow",
+            "meaning": "Stability"
+        },
+        {
+            "rank": "05",
+            "name": "Pattern",
+            "meaning": "Learning"
+        },
+        {
+            "rank": "06",
+            "name": "Circuit",
+            "meaning": "Expansion"
+        },
+        {
+            "rank": "07",
+            "name": "Dual",
+            "meaning": "Secondary Skill"
+        },
+        {
+            "rank": "08",
+            "name": "Sync",
+            "meaning": "Team Synergy"
+        },
+        {
+            "rank": "09",
+            "name": "Matrix",
+            "meaning": "System Awareness"
+        },
+        {
+            "rank": "10",
+            "name": "Core",
+            "meaning": "Specialization Master"
+        },
+        {
+            "rank": "11",
+            "name": "Meta",
+            "meaning": "Phase Transcendence"
+        },
+        {
+            "rank": "12",
+            "name": "Trans",
+            "meaning": "Complete Transition"
+        },
+        {
+            "rank": "13",
+            "name": "Origin",
+            "meaning": "Zero Point / Creation"
+        }
+    ],
+    "naming_rules": {
+        "G01": "{tier_name}-Zen",
+        "G02": "{tier_name}-Focus",
+        "G03": "{tier_name}-Seed",
+        "G04": "{tier_name}-Diver",
+        "G05": "{tier_name}-Linker",
+        "G06": "{tier_name}-Maker",
+        "G07": "{tier_name}-Anchor",
+        "G08": "{tier_name}-Architect",
+        "G09": "{tier_name}-Builder",
+        "G10": "{tier_name}-Speaker",
+        "G11": "{tier_name}-Kid",
+        "G12": "{tier_name}-Knight",
+        "G13": "{tier_name}-Deus"
+    }
+}

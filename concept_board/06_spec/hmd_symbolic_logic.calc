@@ -1,0 +1,75 @@
+/* HMD_SYMBOLIC_LOGIC.calc */
+/* SYSTEM: Hexad Memory Device (HMD) */
+/* FORMALISM: Tesseract-Hexad Vector Space */
+
+// 1. STATE SPACE DEFINITION
+// ==========================================
+// Let T be the Tesseract state space in R4
+set 𝕋 ⊂ [0, 1]⁴ 
+vec 𝐒(t) ∈ 𝕋  := ⟨ c(t), a(t), g(t), h(t) ⟩ 
+    where {
+        c = CE (Ignition),
+        a = AQ (Acceleration),
+        g = GF (Gravity),
+        h = HM (Resonance)
+    }
+
+// 2. HEXAD PROJECTION OPERATORS (Tensor Product)
+// ==========================================
+// The 6 Coupling Planes defined by wedge product
+set ℍ := {
+    π_ca = ê_c ∧ ê_a,  // Launch
+    π_cg = ê_c ∧ ê_g,  // Architecture
+    π_ch = ê_c ∧ ê_h,  // Identity
+    π_ag = ê_a ∧ ê_g,  // System
+    π_ah = ê_a ∧ ê_h,  // Motivation
+    π_gh = ê_g ∧ ê_h   // Onboarding
+}
+
+// Projection Function: Maps 4D state to 2D Manifold
+func Proj(𝐒, π_ij) -> ℝ² {
+    return 𝐒 ⋅ π_ij
+}
+
+// 3. PHASE EVOLUTION (Time Domain)
+// ==========================================
+// Discrete Phase Space over the Cycle C13
+set Φ := { φ_k | k ∈ ℤ, 1 ≤ k ≤ 13 }
+    where φ_13 = SR₀ (Singularity)
+
+// Evolution Operator (Hamiltonian of Change)
+func Δ𝐒(t) {
+    return ∂𝐒/∂t = α(φ)∇c + β(φ)∇a + γ(φ)∇g + δ(φ)∇h
+}
+
+// 4. MEMORY STORAGE KERNEL
+// ==========================================
+// A Memory Cell (μ) is a tuple of Phase, State, and active Manifold
+struct μ {
+    φ ∈ Φ,
+    𝐒 ∈ 𝕋,
+    ω ∈ ℍ  // Dominant Coupling Vector
+}
+
+// Write Function (The Categorization Logic)
+func Write(t) -> μ {
+    let ω_max = argmax_{π ∈ ℍ} || Proj(Δ𝐒(t), π) ||
+    return μ( Φ(t), 𝐒(t), ω_max )
+}
+
+// 5. SR0 CONVERGENCE INTEGRAL (The Commit)
+// ==========================================
+// The Recipe (ℛ) is the closed loop path integral of memory
+func Commit_SR₀(Σμ) -> ℛ {
+    // Conservation of Intent Law
+    if ∮_{cycle} ∇ ⋅ Σμ dφ  ≡  0 {
+        return ℛ( Σμ ) // Conservative Field = Replicable Recipe
+    } else {
+        return ∅       // Entropy = Noise
+    }
+}
+
+// 6. FINAL TRUTH
+// ==========================================
+theorem Unity:
+    ∀t, Commit_SR₀(∫ Write(t) dt) ⟹ 1

@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background: #000;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Custom Title Bar */
+#titlebar {
+  height: 48px;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-bottom: 2px solid #00ff00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-app-region: drag;
+}
+
+.titlebar-drag {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.title {
+  font-size: 14px;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.titlebar-controls {
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar-controls button {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  color: #00ff00;
+  font-size: 20px;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.titlebar-controls button:hover {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+#close-btn:hover {
+  background: rgba(255, 0, 0, 0.3);
+  color: #ff0000;
+}
+
+/* Game Container */
+#game-container {
+  width: 1024px;
+  height: 720px;
+  position: relative;
+  
+  /* CRT Effect */
+  filter: 
+    contrast(1.1)
+    brightness(1.05);
+  
+  /* Scanlines */
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  
+  /* Glow */
+  box-shadow: 
+    inset 0 0 100px rgba(0, 255, 0, 0.1),
+    0 0 50px rgba(0, 255, 0, 0.2);
+}
+
+/* Pixel Perfect */
+canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

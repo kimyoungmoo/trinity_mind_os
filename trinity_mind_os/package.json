@@ -1,0 +1,52 @@
+{
+    "name": "trinity-mind-os",
+    "version": "1.0.0",
+    "description": "Trinity Mind OS - 16-bit Retro Game Style Workflow Visualizer for Antigravity",
+    "main": "dist-electron/main/index.js",
+    "scripts": {
+        "dev:build": "electron-vite build",
+        "dev": "electron-vite dev --watch",
+        "build": "electron-vite build",
+        "build:app": "npm run build && electron-builder --mac --dir",
+        "package": "npm run build && electron-builder --mac",
+        "preview": "electron-vite preview",
+        "start": "electron dist-electron/main/index.js"
+    },
+    "keywords": [
+        "electron",
+        "phaser",
+        "trinity",
+        "neo",
+        "workflow"
+    ],
+    "author": "Trinity Mind Team",
+    "license": "MIT",
+    "build": {
+        "appId": "com.trinitymind.os",
+        "productName": "Trinity Mind OS",
+        "mac": {
+            "category": "public.app-category.developer-tools",
+            "icon": "build/icon.png",
+            "target": [
+                "dmg",
+                "zip"
+            ]
+        },
+        "files": [
+            "dist-electron/**/*",
+            "package.json"
+        ],
+        "directories": {
+            "output": "release"
+        }
+    },
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^25.1.8",
+        "electron-vite": "^2.0.0",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "phaser": "^3.70.0"
+    }
+}

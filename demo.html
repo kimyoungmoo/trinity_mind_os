@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Mind OS - Evolution Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #000;
+      color: #00ff00;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Matrix rain background */
+    #matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #00ff00;
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ff00;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0.7;
+      font-size: 0.9em;
+    }
+
+    /* 4-Core Ring */
+    .core-ring {
+      width: 300px;
+      height: 300px;
+      margin: 30px auto;
+      position: relative;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 336deg,
+        #E93528 0deg 23deg,
+        #ED7F30 23deg 87deg,
+        #E1D547 87deg 115deg,
+        #ACF34C 115deg 157.5deg,
+        #5FCC5E 157.5deg 204.5deg,
+        #53B7C1 204.5deg 237.5deg,
+        #2D69E2 237.5deg 272deg,
+        #9725BB 272deg 312.5deg,
+        #E93528 312.5deg 360deg
+      );
+      animation: rotate 10s linear infinite;
+      box-shadow: 0 0 40px rgba(0, 255, 0, 0.5);
+    }
+
+    .core-ring::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      background: #000;
+      border-radius: 50%;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Character Display */
+    .character-display {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .character-name {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 0 0 20px currentColor;
+      margin-bottom: 10px;
+    }
+
+    .character-tier {
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      margin: 30px 0;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      background: #001100;
+      border: 1px solid #00ff00;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00ff00, #00ff00);
+      transition: width 0.5s ease;
+      box-shadow: 0 0 20px #00ff00;
+    }
+
+    /* Task Simulator */
+    .task-simulator {
+      margin-top: 30px;
+    }
+
+    .task-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 15px;
+      background: #001100;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: #00ff00;
+      color: #000;
+      box-shadow: 0 0 20px #00ff00;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #00ff00;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #00ff00;
+    }
+
+    .stat-label {
+      font-size: 0.8em;
+      opacity: 0.7;
+      margin-top: 5px;
+    }
+
+    /* Level up animation */
+    @keyframes levelup {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .levelup {
+      animation: levelup 0.5s ease;
+    }
+
+    /* Notification */
+    .notification {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 255, 0, 0.95);
+      color: #000;
+      padding: 40px 60px;
+      font-size: 2em;
+      font-weight: bold;
+      border: 3px solid #000;
+      box-shadow: 0 0 50px rgba(0, 255, 0, 0.8);
+      z-index: 1000;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix-bg"></canvas>
+  
+  <div class="container">
+    <h1>TRINITY MIND OS</h1>
+    <div class="subtitle">Experience Your First Evolution</div>
+
+    <div class="core-ring"></div>
+
+    <div class="character-display">
+      <div class="character-name" id="char-name">Neo°</div>
+      <div class="character-tier" id="char-tier">Proto Form</div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-label">
+        <span>Progress to Next Tier</span>
+        <span id="progress-text">0 / 1000 (0%)</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="task-simulator">
+      <h3 style="margin-bottom: 15px;">▸ Simulate Coding Tasks</h3>
+      <div class="task-buttons">
+        <button onclick="runTask('Generate Component', 250)">Generate Component (250 tokens)</button>
+        <button onclick="runTask('Create API', 300)">Create API (300 tokens)</button>
+        <button onclick="runTask('Write Tests', 200)">Write Tests (200 tokens)</button>
+        <button onclick="runTask('Refactor Code', 350)">Refactor Code (350 tokens)</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-value" id="total-exp">0</div>
+        <div class="stat-label">TOTAL EXP</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="total-tokens">0</div>
+        <div class="stat-label">TOKENS CONSUMED</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notification" id="notification"></div>
+
+  <script src="evolution-engine.js"></script>
+  <script src="character.js"></script>
+  <script>
+    // Matrix rain effect
+    const canvas = document.getElementById('matrix-bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#00ff00';
+      ctx.font = fontSize + 'px monospace';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+    setInterval(drawMatrix, 33);
+
+    // Evolution system
+    const engine = new EvolutionEngine();
+    const character = new Character(12, 'Neo');
+
+    function updateUI() {
+      const tierNames = {
+        0: 'Proto Form',
+        1: 'Tier 1', 2: 'Tier 2', 3: 'Tier 3', 4: 'Tier 4',
+        5: 'Tier 5', 6: 'Tier 6', 7: 'Tier 7', 8: 'Tier 8',
+        9: 'Tier 9', 10: 'Tier 10', 11: 'Tier 11', 12: 'Tier 12',
+        13: 'Origin Form ∞'
+      };
+
+      document.getElementById('char-name').textContent = character.getFormName();
+      document.getElementById('char-tier').textContent = tierNames[character.tier];
+      document.getElementById('total-exp').textContent = character.totalExp.toLocaleString();
+      document.getElementById('total-tokens').textContent = character.totalTokensConsumed.toLocaleString();
+
+      const progress = engine.getProgressToNextTier(character.totalExp);
+      document.getElementById('progress-text').textContent = 
+        `${progress.current.toLocaleString()} / ${progress.needed.toLocaleString()} (${progress.percent.toFixed(1)}%)`;
+      document.getElementById('progress-fill').style.width = progress.percent + '%';
+    }
+
+    function showNotification(text) {
+      const notif = document.getElementById('notification');
+      notif.textContent = text;
+      notif.style.display = 'block';
+      setTimeout(() => {
+        notif.style.display = 'none';
+      }, 2000);
+    }
+
+    function runTask(taskName, tokens) {
+      const result = engine.consumeTokens(character, tokens);
+      character.totalTokensConsumed += tokens;
+
+      if (result.leveledUp) {
+        character.recordEvolution(result.oldTier, result.newTier, result.totalExp);
+        document.querySelector('.character-name').classList.add('levelup');
+        setTimeout(() => {
+          document.querySelector('.character-name').classList.remove('levelup');
+        }, 500);
+        showNotification(`🎉 LEVEL UP! Tier ${result.oldTier} → Tier ${result.newTier}`);
+      }
+
+      updateUI();
+    }
+
+    // Initialize
+    updateUI();
+  </script>
+</body>
+</html>

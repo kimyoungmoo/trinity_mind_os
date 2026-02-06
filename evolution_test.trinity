@@ -1,0 +1,31 @@
+/* 
+  Title: Evolution Test
+  Type: T-Lang v1.0
+*/
+
+CAPSULE Evolution_Demo {
+
+    IGNITE Setup {
+        SET project_name = "Neo_Evolution"
+        SET version = "2.0.0"
+        
+        WHY "To test the new capabilities"
+    }
+
+    FLOW Operations {
+        // 실제 명령 실행 시뮬레이션
+        RUN "mkdir -p ./evolution_logs"
+        RUN "echo 'Evolution Complete' > ./evolution_logs/status.txt"
+    }
+
+    ANCHOR Materialization {
+        // 실제 파일 생성 테스트
+        DIR "tlang_output"
+        FILE "tlang_output/readme.txt" = "This file was created by T-Lang Anchoring Magic."
+    }
+
+    RESONATE Communication {
+        EMIT "I can now manipulate matter (files) and energy (commands)."
+        EMIT "Evolution Successful."
+    }
+}

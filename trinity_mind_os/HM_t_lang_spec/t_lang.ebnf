@@ -1,0 +1,24 @@
+/* Trinity Core Engine Language (TCE-L) Grammar Spec v0.1 */
+
+capsule_def = "CAPSULE", identifier, "{", { phase_block }, "}";
+
+phase_block = ignite_block | flow_block | anchor_block | resonate_block;
+
+ignite_block   = "IGNITE", identifier, "{", { ignite_stmt }, "}";
+ignite_stmt    = ("WHY" | "GOAL"), string_literal;
+
+flow_block     = "FLOW", identifier, "{", { flow_stmt }, "}";
+flow_stmt      = "FLOW", identifier, "FROM", identifier, "TO", identifier 
+               | "VIA", string_literal;
+
+anchor_block   = "ANCHOR", identifier, "{", { anchor_stmt }, "}";
+anchor_stmt    = "ANCHOR", identifier 
+               | "FIELD", identifier, ":", type_learning 
+               | "CONSTRAINT", string_literal;
+
+resonate_block = "RESONATE", identifier, "{", { resonate_stmt }, "}";
+resonate_stmt  = "VIBE", string_literal 
+               | "EMIT", string_literal;
+
+identifier     = ? [a-zA-Z_][a-zA-Z0-9_]* ?;
+string_literal = ? "..." ?;

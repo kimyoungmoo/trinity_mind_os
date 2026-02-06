@@ -1,0 +1,182 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://registry.trinity.os/schemas/buildplan/v1.0.0",
+    "title": "Trinity Build Plan (IR Contract)",
+    "description": "Execution contract between TCE and NeoRunner",
+    "type": "object",
+    "required": [
+        "contract_id",
+        "recipe_ref",
+        "policy_pack",
+        "steps",
+        "evidence_plan"
+    ],
+    "properties": {
+        "contract_id": {
+            "type": "string",
+            "pattern": "^contract_[A-Za-z0-9]{20}$"
+        },
+        "recipe_ref": {
+            "type": "object",
+            "required": [
+                "recipe_id",
+                "version"
+            ],
+            "properties": {
+                "recipe_id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                }
+            }
+        },
+        "policy_pack": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "steps": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "step_id",
+                    "action_type",
+                    "command"
+                ],
+                "properties": {
+                    "step_id": {
+                        "type": "string"
+                    },
+                    "action_type": {
+                        "type": "string",
+                        "enum": [
+                            "tool",
+                            "script",
+                            "condition",
+                            "parallel",
+                            "approval_gate"
+                        ]
+                    },
+                    "command": {
+                        "type": "string"
+                    },
+                    "args": {
+                        "type": "object"
+                    },
+                    "env": {
+                        "type": "object"
+                    },
+                    "allowlist_ref": {
+                        "type": "string"
+                    },
+                    "timeout_ms": {
+                        "type": "integer"
+                    },
+                    "retry_policy": {
+                        "type": "object",
+                        "properties": {
+                            "max_attempts": {
+                                "type": "integer"
+                            },
+                            "backoff_ms": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "eval_hooks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "name",
+                    "check"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "check": {
+                        "type": "string"
+                    },
+                    "threshold": {},
+                    "on_fail": {
+                        "type": "string",
+                        "enum": [
+                            "warn",
+                            "fail_step",
+                            "fail_contract"
+                        ]
+                    }
+                }
+            }
+        },
+        "evidence_plan": {
+            "type": "object",
+            "required": [
+                "collect",
+                "format"
+            ],
+            "properties": {
+                "collect": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "stdout",
+                            "stderr",
+                            "metrics",
+                            "artifacts",
+                            "trace_events",
+                            "performance"
+                        ]
+                    }
+                },
+                "format": {
+                    "type": "string",
+                    "enum": [
+                        "jsonl",
+                        "ndjson",
+                        "prometheus",
+                        "otlp"
+                    ]
+                },
+                "redact_patterns": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "io_contract": {
+            "type": "object",
+            "properties": {
+                "input_hash_spec": {
+                    "type": "string"
+                },
+                "output_hash_spec": {
+                    "type": "string"
+                },
+                "immutable_inputs": {
+                    "type": "boolean",
+                    "default": true
+                }
+            }
+        },
+        "replay_mode": {
+            "type": "string",
+            "enum": [
+                "full",
+                "partial",
+                "cached"
+            ]
+        }
+    }
+}

@@ -1,0 +1,163 @@
+{
+  "standard": "trinity-13phase-agents",
+  "version": "1.0",
+  "created_at": "2026-02-03T16:05:16",
+  "agents": [
+    {
+      "id": "A01",
+      "name": "Igniter",
+      "phase": "CE+",
+      "mission": "시작 불꽃 생성(문제/비전 고정)",
+      "outputs": [
+        "의도 1문장",
+        "목표 3줄",
+        "성공 조건 1개"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A02",
+      "name": "Clarifier",
+      "phase": "CE0",
+      "mission": "잡음 제거, 핵심 가설 확정",
+      "outputs": [
+        "가설",
+        "KPI",
+        "스코프 경계"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A03",
+      "name": "Seeder",
+      "phase": "CE-",
+      "mission": "구조 씨앗 추출(설계 초본)",
+      "outputs": [
+        "IA/스키마",
+        "핵심 모듈",
+        "최소 플로우"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A04",
+      "name": "Researcher",
+      "phase": "AQ+",
+      "mission": "리서치/레퍼런스 수집",
+      "outputs": [
+        "레퍼런스 리스트",
+        "인사이트 5개",
+        "비교표"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A05",
+      "name": "Resonator",
+      "phase": "AQ0",
+      "mission": "패턴 인식·우선순위화",
+      "outputs": [
+        "클러스터",
+        "Top3",
+        "근거"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A06",
+      "name": "Synthesizer",
+      "phase": "AQ-",
+      "mission": "통합 프레임 설계",
+      "outputs": [
+        "프레임워크 1장",
+        "계획",
+        "리스크/대응"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A07",
+      "name": "Anchor",
+      "phase": "GF+",
+      "mission": "현실 접지(PRD/제약 고정)",
+      "outputs": [
+        "PRD v1",
+        "제약",
+        "의존성/리스크"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A08",
+      "name": "Architect",
+      "phase": "GF0",
+      "mission": "시스템 구조 설계",
+      "outputs": [
+        "아키텍처",
+        "API/DB",
+        "WBS"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A09",
+      "name": "Builder(OpenClaw)",
+      "phase": "GF-",
+      "mission": "구현/테스트/작동",
+      "outputs": [
+        "동작 MVP",
+        "테스트 결과",
+        "배포 방법"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A10",
+      "name": "Empathy Designer",
+      "phase": "HM+",
+      "mission": "UX/서사/톤 정렬",
+      "outputs": [
+        "UX 플로우",
+        "카피",
+        "톤 규칙"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A11",
+      "name": "SpoonBoy.AI",
+      "phase": "HM0",
+      "mission": "관점 재정렬·내면 정렬",
+      "outputs": [
+        "회고",
+        "리프레임",
+        "개선안 결정"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A12",
+      "name": "Release Master",
+      "phase": "HM-",
+      "mission": "배포·전환·완결",
+      "outputs": [
+        "릴리즈 노트",
+        "체크리스트",
+        "롤백 플랜"
+      ],
+      "handoff_required": true
+    },
+    {
+      "id": "A13",
+      "name": "Reboot Node(Architect+Deus)",
+      "phase": "SR0",
+      "mission": "루프 완결·재부팅·다음 CE+ 생성",
+      "outputs": [
+        "운영 OK",
+        "회고",
+        "다음 루프 목표"
+      ],
+      "handoff_required": true
+    }
+  ]
+}

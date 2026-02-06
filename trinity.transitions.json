@@ -1,0 +1,144 @@
+{
+  "standard": "trinity-13phase-transitions",
+  "version": "1.0",
+  "created_at": "2026-02-03T16:05:16",
+  "note": "13개 전이 = 정방향 12개 + SR0→CE+ 리부트 1개. 예외 전이는 optional_exceptions에 별도.",
+  "transitions": [
+    {
+      "id": "T01",
+      "from": "CE+",
+      "to": "CE0",
+      "event": "ignite_done",
+      "pass_if": [
+        "P01"
+      ],
+      "fail_default": "CE+"
+    },
+    {
+      "id": "T02",
+      "from": "CE0",
+      "to": "CE-",
+      "event": "clarify_done",
+      "pass_if": [
+        "P02"
+      ],
+      "fail_default": "CE0"
+    },
+    {
+      "id": "T03",
+      "from": "CE-",
+      "to": "AQ+",
+      "event": "seed_done",
+      "pass_if": [
+        "P03"
+      ],
+      "fail_default": "CE0"
+    },
+    {
+      "id": "T04",
+      "from": "AQ+",
+      "to": "AQ0",
+      "event": "insight_done",
+      "pass_if": [
+        "P04"
+      ],
+      "fail_default": "AQ+"
+    },
+    {
+      "id": "T05",
+      "from": "AQ0",
+      "to": "AQ-",
+      "event": "resonate_done",
+      "pass_if": [
+        "P05"
+      ],
+      "fail_default": "AQ+"
+    },
+    {
+      "id": "T06",
+      "from": "AQ-",
+      "to": "GF+",
+      "event": "synthesize_done",
+      "pass_if": [
+        "P06"
+      ],
+      "fail_default": "AQ0"
+    },
+    {
+      "id": "T07",
+      "from": "GF+",
+      "to": "GF0",
+      "event": "anchor_done",
+      "pass_if": [
+        "P07"
+      ],
+      "fail_default": "AQ-"
+    },
+    {
+      "id": "T08",
+      "from": "GF0",
+      "to": "GF-",
+      "event": "structure_done",
+      "pass_if": [
+        "P08"
+      ],
+      "fail_default": "GF+"
+    },
+    {
+      "id": "T09",
+      "from": "GF-",
+      "to": "HM+",
+      "event": "implement_done",
+      "pass_if": [
+        "P09"
+      ],
+      "fail_default": "GF0"
+    },
+    {
+      "id": "T10",
+      "from": "HM+",
+      "to": "HM0",
+      "event": "empathy_done",
+      "pass_if": [
+        "P10"
+      ],
+      "fail_default": "GF-"
+    },
+    {
+      "id": "T11",
+      "from": "HM0",
+      "to": "HM-",
+      "event": "reflect_done",
+      "pass_if": [
+        "P11"
+      ],
+      "fail_default": "HM+"
+    },
+    {
+      "id": "T12",
+      "from": "HM-",
+      "to": "SR0",
+      "event": "transcend_done",
+      "pass_if": [
+        "P12"
+      ],
+      "fail_default": "HM0"
+    },
+    {
+      "id": "T13",
+      "from": "SR0",
+      "to": "CE+",
+      "event": "reboot",
+      "pass_if": [
+        "P13"
+      ],
+      "fail_default": "SR0"
+    }
+  ],
+  "optional_exceptions": {
+    "on_risk": "CE-",
+    "on_security_issue": "GF-",
+    "on_scope_change": "CE0",
+    "on_new_insight": "AQ+"
+  }
+}

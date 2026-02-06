@@ -1,0 +1,742 @@
+{
+  "version": "1.0",
+  "created_at": "2026-02-04T02:41:05",
+  "required_cells_per_phase": {
+    "CE+": [
+      {
+        "phase": "CE+",
+        "z": 0,
+        "artifact_slug": "build_env",
+        "x": 9,
+        "lane_default_slug": "deploy",
+        "lane_default_y": 2,
+        "lane_allowed_slugs": [
+          "deploy",
+          "dev",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          2,
+          1,
+          10
+        ],
+        "why": "재현 가능한 빌드/환경이 다음 단계 속도를 결정",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "build.md"
+            }
+          },
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": ".env.example"
+            }
+          },
+          {
+            "predicate": "ci_green",
+            "args": {
+              "ci_run_ref": "latest"
+            }
+          }
+        ]
+      }
+    ],
+    "CE0": [
+      {
+        "phase": "CE0",
+        "z": 1,
+        "artifact_slug": "requirements",
+        "x": 1,
+        "lane_default_slug": "product",
+        "lane_default_y": 0,
+        "lane_allowed_slugs": [
+          "product",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          0,
+          10
+        ],
+        "why": "요구사항/우선순위 확정 없이는 전이가 산만",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "requirements.md"
+            }
+          },
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "requirements.md",
+              "required_headings": [
+                "우선순위",
+                "범위(스코프)",
+                "비범위(Out of Scope)"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "CE-": [
+      {
+        "phase": "CE-",
+        "z": 2,
+        "artifact_slug": "data_model",
+        "x": 4,
+        "lane_default_slug": "dev",
+        "lane_default_y": 1,
+        "lane_allowed_slugs": [
+          "dev",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          1,
+          10
+        ],
+        "why": "타입/스키마 확정이 구현 안정성의 기반",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "schema.prisma"
+            }
+          },
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "data_model.md",
+              "required_headings": [
+                "엔티티",
+                "관계",
+                "인덱스/제약"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "AQ+": [
+      {
+        "phase": "AQ+",
+        "z": 3,
+        "artifact_slug": "context_brief",
+        "x": 0,
+        "lane_default_slug": "docs",
+        "lane_default_y": 10,
+        "lane_allowed_slugs": [
+          "docs",
+          "product"
+        ],
+        "lane_allowed_y": [
+          10,
+          0
+        ],
+        "why": "현황/의존성/리스크 1p 고정으로 재작업 감소",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "context.md"
+            }
+          },
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "context.md",
+              "required_headings": [
+                "현황 요약",
+                "의존성",
+                "리스크"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "AQ0": [
+      {
+        "phase": "AQ0",
+        "z": 4,
+        "artifact_slug": "tests",
+        "x": 8,
+        "lane_default_slug": "dev",
+        "lane_default_y": 1,
+        "lane_allowed_slugs": [
+          "dev",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          1,
+          10
+        ],
+        "why": "테스트는 전이 조건을 객관화(검증 기반 DoD)",
+        "dod": [
+          {
+            "predicate": "tests_pass",
+            "args": {
+              "test_report_ref": "latest"
+            }
+          }
+        ]
+      }
+    ],
+    "AQ-": [
+      {
+        "phase": "AQ-",
+        "z": 5,
+        "artifact_slug": "integration",
+        "x": 6,
+        "lane_default_slug": "dev",
+        "lane_default_y": 1,
+        "lane_allowed_slugs": [
+          "dev",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          1,
+          10
+        ],
+        "why": "외부 API 계약/리트라이/타임아웃 표준화",
+        "dod": [
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "integrations.md",
+              "required_headings": [
+                "엔드포인트",
+                "인증",
+                "리트라이/타임아웃",
+                "에러코드"
+              ]
+            }
+          },
+          {
+            "predicate": "tests_pass",
+            "args": {
+              "test_report_ref": "integration"
+            }
+          }
+        ]
+      }
+    ],
+    "GF+": [
+      {
+        "phase": "GF+",
+        "z": 6,
+        "artifact_slug": "spec_prd",
+        "x": 2,
+        "lane_default_slug": "docs",
+        "lane_default_y": 10,
+        "lane_allowed_slugs": [
+          "docs",
+          "product"
+        ],
+        "lane_allowed_y": [
+          10,
+          0
+        ],
+        "why": "PRD/스펙/로드맵은 합의문(의사결정 로그)",
+        "dod": [
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "prd.md",
+              "required_headings": [
+                "목표/성공지표",
+                "사용자/문제",
+                "요구사항",
+                "범위",
+                "리스크"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "GF0": [
+      {
+        "phase": "GF0",
+        "z": 7,
+        "artifact_slug": "architecture",
+        "x": 3,
+        "lane_default_slug": "docs",
+        "lane_default_y": 10,
+        "lane_allowed_slugs": [
+          "docs",
+          "dev"
+        ],
+        "lane_allowed_y": [
+          10,
+          1
+        ],
+        "why": "아키텍처는 복잡도/변경비용을 통제",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "architecture.md"
+            }
+          },
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "architecture_diagram.png"
+            }
+          }
+        ]
+      }
+    ],
+    "GF-": [
+      {
+        "phase": "GF-",
+        "z": 8,
+        "artifact_slug": "business_logic",
+        "x": 5,
+        "lane_default_slug": "dev",
+        "lane_default_y": 1,
+        "lane_allowed_slugs": [
+          "dev"
+        ],
+        "lane_allowed_y": [
+          1
+        ],
+        "why": "핵심 유스케이스 로직이 제품의 심장",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "logic.ts"
+            }
+          },
+          {
+            "predicate": "tests_pass",
+            "args": {
+              "test_report_ref": "unit"
+            }
+          }
+        ]
+      }
+    ],
+    "HM+": [
+      {
+        "phase": "HM+",
+        "z": 9,
+        "artifact_slug": "ui_ux",
+        "x": 10,
+        "lane_default_slug": "product",
+        "lane_default_y": 0,
+        "lane_allowed_slugs": [
+          "product",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          0,
+          10
+        ],
+        "why": "사용자 체감 품질(UX/a11y/반응형) 최적화",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "ui.md"
+            }
+          },
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "ui.md",
+              "required_headings": [
+                "디자인 토큰",
+                "반응형",
+                "접근성(a11y)"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "HM0": [
+      {
+        "phase": "HM0",
+        "z": 10,
+        "artifact_slug": "stability",
+        "x": 7,
+        "lane_default_slug": "dev",
+        "lane_default_y": 1,
+        "lane_allowed_slugs": [
+          "dev",
+          "analytics"
+        ],
+        "lane_allowed_y": [
+          1,
+          8
+        ],
+        "why": "리팩터링/성능/에러핸들링으로 장기 운영성 확보",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "stability.md"
+            }
+          },
+          {
+            "predicate": "tests_pass",
+            "args": {
+              "test_report_ref": "regression"
+            }
+          }
+        ]
+      }
+    ],
+    "HM-": [
+      {
+        "phase": "HM-",
+        "z": 11,
+        "artifact_slug": "release",
+        "x": 11,
+        "lane_default_slug": "deploy",
+        "lane_default_y": 2,
+        "lane_allowed_slugs": [
+          "deploy",
+          "docs"
+        ],
+        "lane_allowed_y": [
+          2,
+          10
+        ],
+        "why": "릴리스 체크리스트/노트/핫픽스 플랜 고정",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "release.md"
+            }
+          },
+          {
+            "predicate": "contains_sections",
+            "args": {
+              "markdown_ref": "release.md",
+              "required_headings": [
+                "릴리스 체크리스트",
+                "릴리스 노트",
+                "롤백/핫픽스"
+              ]
+            }
+          },
+          {
+            "predicate": "ci_green",
+            "args": {
+              "ci_run_ref": "release"
+            }
+          }
+        ]
+      }
+    ],
+    "SR0": [
+      {
+        "phase": "SR0",
+        "z": 12,
+        "artifact_slug": "analytics_auto",
+        "x": 12,
+        "lane_default_slug": "analytics",
+        "lane_default_y": 8,
+        "lane_allowed_slugs": [
+          "analytics",
+          "meta"
+        ],
+        "lane_allowed_y": [
+          8,
+          12
+        ],
+        "why": "지표/로그 기반 학습 + 자동화로 다음 루프 최적화",
+        "dod": [
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "metrics.md"
+            }
+          },
+          {
+            "predicate": "file_exists",
+            "args": {
+              "path_or_ref": "automation.py"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "predicate_contract": {
+    "file_exists": {
+      "type": "predicate",
+      "args": [
+        "path_or_ref"
+      ],
+      "meaning": "산출물 파일/링크가 존재"
+    },
+    "contains_sections": {
+      "type": "predicate",
+      "args": [
+        "markdown_ref",
+        "required_headings[]"
+      ],
+      "meaning": "문서에 필수 섹션 포함"
+    },
+    "tests_pass": {
+      "type": "predicate",
+      "args": [
+        "test_report_ref"
+      ],
+      "meaning": "테스트 통과"
+    },
+    "ci_green": {
+      "type": "predicate",
+      "args": [
+        "ci_run_ref"
+      ],
+      "meaning": "CI 파이프라인 성공"
+    },
+    "metric_below": {
+      "type": "predicate",
+      "args": [
+        "metric",
+        "threshold"
+      ],
+      "meaning": "지표가 임계값 이하"
+    },
+    "metric_above": {
+      "type": "predicate",
+      "args": [
+        "metric",
+        "threshold"
+      ],
+      "meaning": "지표가 임계값 이상"
+    }
+  },
+  "artifact_dod_templates": {
+    "build_env": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "build.md"
+        }
+      },
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": ".env.example"
+        }
+      },
+      {
+        "predicate": "ci_green",
+        "args": {
+          "ci_run_ref": "latest"
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "requirements.md"
+        }
+      },
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "requirements.md",
+          "required_headings": [
+            "우선순위",
+            "범위(스코프)",
+            "비범위(Out of Scope)"
+          ]
+        }
+      }
+    ],
+    "data_model": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "schema.prisma"
+        }
+      },
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "data_model.md",
+          "required_headings": [
+            "엔티티",
+            "관계",
+            "인덱스/제약"
+          ]
+        }
+      }
+    ],
+    "context_brief": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "context.md"
+        }
+      },
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "context.md",
+          "required_headings": [
+            "현황 요약",
+            "의존성",
+            "리스크"
+          ]
+        }
+      }
+    ],
+    "tests": [
+      {
+        "predicate": "tests_pass",
+        "args": {
+          "test_report_ref": "latest"
+        }
+      }
+    ],
+    "integration": [
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "integrations.md",
+          "required_headings": [
+            "엔드포인트",
+            "인증",
+            "리트라이/타임아웃",
+            "에러코드"
+          ]
+        }
+      },
+      {
+        "predicate": "tests_pass",
+        "args": {
+          "test_report_ref": "integration"
+        }
+      }
+    ],
+    "spec_prd": [
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "prd.md",
+          "required_headings": [
+            "목표/성공지표",
+            "사용자/문제",
+            "요구사항",
+            "범위",
+            "리스크"
+          ]
+        }
+      }
+    ],
+    "architecture": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "architecture.md"
+        }
+      },
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "architecture_diagram.png"
+        }
+      }
+    ],
+    "business_logic": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "logic.ts"
+        }
+      },
+      {
+        "predicate": "tests_pass",
+        "args": {
+          "test_report_ref": "unit"
+        }
+      }
+    ],
+    "ui_ux": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "ui.md"
+        }
+      },
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "ui.md",
+          "required_headings": [
+            "디자인 토큰",
+            "반응형",
+            "접근성(a11y)"
+          ]
+        }
+      }
+    ],
+    "stability": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "stability.md"
+        }
+      },
+      {
+        "predicate": "tests_pass",
+        "args": {
+          "test_report_ref": "regression"
+        }
+      }
+    ],
+    "release": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "release.md"
+        }
+      },
+      {
+        "predicate": "contains_sections",
+        "args": {
+          "markdown_ref": "release.md",
+          "required_headings": [
+            "릴리스 체크리스트",
+            "릴리스 노트",
+            "롤백/핫픽스"
+          ]
+        }
+      },
+      {
+        "predicate": "ci_green",
+        "args": {
+          "ci_run_ref": "release"
+        }
+      }
+    ],
+    "analytics_auto": [
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "metrics.md"
+        }
+      },
+      {
+        "predicate": "file_exists",
+        "args": {
+          "path_or_ref": "automation.py"
+        }
+      }
+    ]
+  }
+}

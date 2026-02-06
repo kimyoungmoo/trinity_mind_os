@@ -1,0 +1,31 @@
+{
+    "hex_cell_id": "sr0_commit_hmd_implementation_v1",
+    "phase": "SR₀",
+    "tesseract": {
+        "CE": 0.8,
+        "AQ": 0.9,
+        "GF": 0.7,
+        "HM": 0.6
+    },
+    "coupling": {
+        "id": "AQGF",
+        "dir": "AQ->GF"
+    },
+    "type": "canon",
+    "resonance": 0.95,
+    "payload": {
+        "decision": "HMD v1.0 파일 시스템 및 데이터 구조 확정",
+        "artifact": "bold_cube/hmd/README.md",
+        "recipes": [
+            "폴더 구조: hmd/dynamic/, hmd/diagnostic/, hmd/canon/, hmd/archive/",
+            "데이터베이스: 각 헥사드 채널별 폴더 + 위상 인덱스",
+            "JSON 스키마: hex_cell 표준 포맷 확정",
+            "보간 엔진: interpolation_engine/rules.json 프로토타입"
+        ]
+    },
+    "trace": {
+        "source": "HMD 설계 문서 분석",
+        "why": "개념 설계 완료 → 실행 가능한 구조로 전환 필요",
+        "next_phase": "Phase 2: 13위상 × 6헥사드 매트릭스 완성"
+    }
+}

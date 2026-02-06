@@ -1,0 +1,422 @@
+{
+  "version": "1.0",
+  "created_at": "2026-02-04T02:00:40",
+  "axes": {
+    "x_artifact_types": [
+      {
+        "x": 0,
+        "slug": "context_brief",
+        "ko": "맥락/요약",
+        "h_shift": 0,
+        "s_delta": -6,
+        "l_delta": 8,
+        "example": "context.md"
+      },
+      {
+        "x": 1,
+        "slug": "requirements",
+        "ko": "요구사항/우선순위",
+        "h_shift": 0,
+        "s_delta": -4,
+        "l_delta": 6,
+        "example": "requirements.md"
+      },
+      {
+        "x": 2,
+        "slug": "spec_prd",
+        "ko": "PRD/스펙/로드맵",
+        "h_shift": 0,
+        "s_delta": -2,
+        "l_delta": 4,
+        "example": "prd.md"
+      },
+      {
+        "x": 3,
+        "slug": "architecture",
+        "ko": "아키텍처/설계",
+        "h_shift": -2,
+        "s_delta": 0,
+        "l_delta": 2,
+        "example": "architecture.md"
+      },
+      {
+        "x": 4,
+        "slug": "data_model",
+        "ko": "타입/데이터모델",
+        "h_shift": -4,
+        "s_delta": 2,
+        "l_delta": 0,
+        "example": "schema.prisma"
+      },
+      {
+        "x": 5,
+        "slug": "business_logic",
+        "ko": "핵심 로직",
+        "h_shift": -6,
+        "s_delta": 4,
+        "l_delta": -2,
+        "example": "logic.ts"
+      },
+      {
+        "x": 6,
+        "slug": "integration",
+        "ko": "외부연동/API",
+        "h_shift": -8,
+        "s_delta": 6,
+        "l_delta": -4,
+        "example": "integrations.md"
+      },
+      {
+        "x": 7,
+        "slug": "stability",
+        "ko": "안정성/리팩터링",
+        "h_shift": -10,
+        "s_delta": -2,
+        "l_delta": -6,
+        "example": "stability.md"
+      },
+      {
+        "x": 8,
+        "slug": "tests",
+        "ko": "테스트",
+        "h_shift": 6,
+        "s_delta": -2,
+        "l_delta": -2,
+        "example": "tests.spec.ts"
+      },
+      {
+        "x": 9,
+        "slug": "build_env",
+        "ko": "빌드/환경",
+        "h_shift": 8,
+        "s_delta": -4,
+        "l_delta": -4,
+        "example": "build.md"
+      },
+      {
+        "x": 10,
+        "slug": "ui_ux",
+        "ko": "UI/UX",
+        "h_shift": 10,
+        "s_delta": 2,
+        "l_delta": 2,
+        "example": "ui.md"
+      },
+      {
+        "x": 11,
+        "slug": "release",
+        "ko": "릴리스",
+        "h_shift": 12,
+        "s_delta": 0,
+        "l_delta": -6,
+        "example": "release.md"
+      },
+      {
+        "x": 12,
+        "slug": "analytics_auto",
+        "ko": "분석/자동화",
+        "h_shift": 14,
+        "s_delta": -2,
+        "l_delta": -8,
+        "example": "automation.py"
+      }
+    ],
+    "y_workstream_lanes": [
+      {
+        "y": 0,
+        "slug": "product",
+        "ko": "제품/기획",
+        "h_shift": 0,
+        "s_delta": 0,
+        "l_delta": 0
+      },
+      {
+        "y": 1,
+        "slug": "dev",
+        "ko": "개발",
+        "h_shift": 0,
+        "s_delta": 0,
+        "l_delta": -2
+      },
+      {
+        "y": 2,
+        "slug": "deploy",
+        "ko": "배포/인프라",
+        "h_shift": -2,
+        "s_delta": -4,
+        "l_delta": -4
+      },
+      {
+        "y": 3,
+        "slug": "domain",
+        "ko": "도메인/비즈",
+        "h_shift": 2,
+        "s_delta": 0,
+        "l_delta": 0
+      },
+      {
+        "y": 4,
+        "slug": "payment",
+        "ko": "결제/수익",
+        "h_shift": 4,
+        "s_delta": 2,
+        "l_delta": -2
+      },
+      {
+        "y": 5,
+        "slug": "community",
+        "ko": "커뮤니티",
+        "h_shift": 6,
+        "s_delta": 4,
+        "l_delta": 2
+      },
+      {
+        "y": 6,
+        "slug": "admin",
+        "ko": "관리/운영",
+        "h_shift": -4,
+        "s_delta": -2,
+        "l_delta": -2
+      },
+      {
+        "y": 7,
+        "slug": "marketing",
+        "ko": "마케팅",
+        "h_shift": 8,
+        "s_delta": 6,
+        "l_delta": 2
+      },
+      {
+        "y": 8,
+        "slug": "analytics",
+        "ko": "분석/데이터",
+        "h_shift": -6,
+        "s_delta": -2,
+        "l_delta": -6
+      },
+      {
+        "y": 9,
+        "slug": "security",
+        "ko": "보안/정책",
+        "h_shift": -10,
+        "s_delta": -6,
+        "l_delta": -8
+      },
+      {
+        "y": 10,
+        "slug": "docs",
+        "ko": "문서",
+        "h_shift": 0,
+        "s_delta": -8,
+        "l_delta": 6
+      },
+      {
+        "y": 11,
+        "slug": "support",
+        "ko": "지원/CS",
+        "h_shift": 10,
+        "s_delta": 2,
+        "l_delta": 4
+      },
+      {
+        "y": 12,
+        "slug": "meta",
+        "ko": "메타/실험",
+        "h_shift": 12,
+        "s_delta": 8,
+        "l_delta": 8
+      }
+    ],
+    "z_phases": [
+      {
+        "z": 0,
+        "num": 1,
+        "phase": "CE+",
+        "core": "CE",
+        "ko": "점화",
+        "matrix": "Neo",
+        "hsl": {
+          "h": 0,
+          "s": 88,
+          "l": 56
+        },
+        "icon": "t13_ce_plus_ignite"
+      },
+      {
+        "z": 1,
+        "num": 2,
+        "phase": "CE0",
+        "core": "CE",
+        "ko": "명료",
+        "matrix": "Morpheus",
+        "hsl": {
+          "h": 0,
+          "s": 78,
+          "l": 48
+        },
+        "icon": "t13_ce_zero_clarify"
+      },
+      {
+        "z": 2,
+        "num": 3,
+        "phase": "CE-",
+        "core": "CE",
+        "ko": "씨앗",
+        "matrix": "Trinity",
+        "hsl": {
+          "h": 0,
+          "s": 68,
+          "l": 40
+        },
+        "icon": "t13_ce_minus_seed"
+      },
+      {
+        "z": 3,
+        "num": 4,
+        "phase": "AQ+",
+        "core": "AQ",
+        "ko": "인사이트",
+        "matrix": "Tank",
+        "hsl": {
+          "h": 110,
+          "s": 88,
+          "l": 56
+        },
+        "icon": "t13_aq_plus_insight"
+      },
+      {
+        "z": 4,
+        "num": 5,
+        "phase": "AQ0",
+        "core": "AQ",
+        "ko": "공명",
+        "matrix": "Seraph",
+        "hsl": {
+          "h": 110,
+          "s": 78,
+          "l": 48
+        },
+        "icon": "t13_aq_zero_resonate"
+      },
+      {
+        "z": 5,
+        "num": 6,
+        "phase": "AQ-",
+        "core": "AQ",
+        "ko": "합성",
+        "matrix": "Niobe",
+        "hsl": {
+          "h": 110,
+          "s": 68,
+          "l": 40
+        },
+        "icon": "t13_aq_minus_synthesize"
+      },
+      {
+        "z": 6,
+        "num": 7,
+        "phase": "GF+",
+        "core": "GF",
+        "ko": "기준점",
+        "matrix": "Oracle",
+        "hsl": {
+          "h": 190,
+          "s": 88,
+          "l": 56
+        },
+        "icon": "t13_gf_plus_anchor"
+      },
+      {
+        "z": 7,
+        "num": 8,
+        "phase": "GF0",
+        "core": "GF",
+        "ko": "구조화",
+        "matrix": "Sati",
+        "hsl": {
+          "h": 190,
+          "s": 78,
+          "l": 48
+        },
+        "icon": "t13_gf_zero_structure"
+      },
+      {
+        "z": 8,
+        "num": 9,
+        "phase": "GF-",
+        "core": "GF",
+        "ko": "구현",
+        "matrix": "Agent Smith",
+        "hsl": {
+          "h": 190,
+          "s": 68,
+          "l": 40
+        },
+        "icon": "t13_gf_minus_implement"
+      },
+      {
+        "z": 9,
+        "num": 10,
+        "phase": "HM+",
+        "core": "HM",
+        "ko": "공감",
+        "matrix": "Zion Council",
+        "hsl": {
+          "h": 270,
+          "s": 88,
+          "l": 56
+        },
+        "icon": "t13_hm_plus_empathy"
+      },
+      {
+        "z": 10,
+        "num": 11,
+        "phase": "HM0",
+        "core": "HM",
+        "ko": "성찰(스푼보이)",
+        "matrix": "Spoon Boy",
+        "hsl": {
+          "h": 270,
+          "s": 78,
+          "l": 48
+        },
+        "icon": "t13_hm_zero_reflect"
+      },
+      {
+        "z": 11,
+        "num": 12,
+        "phase": "HM-",
+        "core": "HM",
+        "ko": "초월",
+        "matrix": "Mifune",
+        "hsl": {
+          "h": 270,
+          "s": 68,
+          "l": 40
+        },
+        "icon": "t13_hm_minus_transcend"
+      },
+      {
+        "z": 12,
+        "num": 13,
+        "phase": "SR0",
+        "core": "SR0",
+        "ko": "영점",
+        "matrix": "Architect + Deus",
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 98
+        },
+        "icon": "t13_sr0_zero_point"
+      }
+    ]
+  },
+  "color_rule": {
+    "formula": "H=(phase.h + lane.h_shift + artifact.h_shift) mod 360; S=clamp(phase.s + lane.s_delta + artifact.s_delta); L=clamp(phase.l + lane.l_delta + artifact.l_delta)",
+    "notes": [
+      "phase 색이 기본(정체성)이고, lane은 '업무 영역'의 온도/밝기, artifact는 '산출물 타입'의 질감(채도/명도)을 조절한다.",
+      "SR0는 기본이 무채색이라 대부분 회색/화이트 계열로 수렴한다."
+    ]
+  }
+}

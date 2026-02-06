@@ -1,0 +1,1475 @@
+{
+  "project": "Trinity-Evolution-169",
+  "timestamp": "2026-02-04T12:56:36.396Z",
+  "matrix": [
+    {
+      "guardian_id": "G01",
+      "guardian_name": "Zen",
+      "phase": "P01_CE+",
+      "archetype": "Igniter",
+      "attribute": "Fire (🔥)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Zen",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Spark"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Zen",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Spark v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Zen",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Spark v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Zen",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Spark v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Zen",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Spark v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Zen",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Spark v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Zen",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Spark v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Zen",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Spark v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Zen",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Spark v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Zen (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Spark v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Zen",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Spark v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Zen",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Spark v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Zen (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Spark v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G02",
+      "guardian_name": "Focus",
+      "phase": "P02_CE0",
+      "archetype": "Mentor",
+      "attribute": "Fire (🔥)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Focus",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Clarity Ping"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Focus",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Clarity Ping v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Focus",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Clarity Ping v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Focus",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Clarity Ping v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Focus",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Clarity Ping v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Focus",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Clarity Ping v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Focus",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Clarity Ping v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Focus",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Clarity Ping v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Focus",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Clarity Ping v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Focus (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Clarity Ping v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Focus",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Clarity Ping v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Focus",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Clarity Ping v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Focus (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Clarity Ping v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G03",
+      "guardian_name": "Seed",
+      "phase": "P03_CE-",
+      "archetype": "Blueprint",
+      "attribute": "Fire (🔥)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Seed",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Core Scan"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Seed",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Core Scan v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Seed",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Core Scan v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Seed",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Core Scan v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Seed",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Core Scan v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Seed",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Core Scan v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Seed",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Core Scan v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Seed",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Core Scan v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Seed",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Core Scan v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Seed (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Core Scan v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Seed",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Core Scan v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Seed",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Core Scan v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Seed (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Core Scan v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G04",
+      "guardian_name": "Diver",
+      "phase": "P04_AQ+",
+      "archetype": "Researcher",
+      "attribute": "Insight (🌿)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Diver",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Data Pulse"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Diver",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Data Pulse v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Diver",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Data Pulse v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Diver",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Data Pulse v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Diver",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Data Pulse v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Diver",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Data Pulse v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Diver",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Data Pulse v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Diver",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Data Pulse v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Diver",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Data Pulse v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Diver (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Data Pulse v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Diver",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Data Pulse v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Diver",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Data Pulse v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Diver (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Data Pulse v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G05",
+      "guardian_name": "Linker",
+      "phase": "P05_AQ0",
+      "archetype": "Resonator",
+      "attribute": "Insight (🌿)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Linker",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Pattern Sense"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Linker",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Pattern Sense v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Linker",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Pattern Sense v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Linker",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Pattern Sense v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Linker",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Pattern Sense v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Linker",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Pattern Sense v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Linker",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Pattern Sense v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Linker",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Pattern Sense v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Linker",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Pattern Sense v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Linker (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Pattern Sense v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Linker",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Pattern Sense v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Linker",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Pattern Sense v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Linker (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Pattern Sense v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G06",
+      "guardian_name": "Maker",
+      "phase": "P06_AQ-",
+      "archetype": "Modeler",
+      "attribute": "Insight (🌿)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Maker",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Merge Node"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Maker",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Merge Node v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Maker",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Merge Node v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Maker",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Merge Node v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Maker",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Merge Node v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Maker",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Merge Node v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Maker",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Merge Node v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Maker",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Merge Node v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Maker",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Merge Node v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Maker (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Merge Node v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Maker",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Merge Node v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Maker",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Merge Node v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Maker (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Merge Node v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G07",
+      "guardian_name": "Anchor",
+      "phase": "P07_GF+",
+      "archetype": "Analyst",
+      "attribute": "Standard (🌊)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Anchor",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Gravity Step"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Anchor",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Gravity Step v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Anchor",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Gravity Step v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Anchor",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Gravity Step v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Anchor",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Gravity Step v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Anchor",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Gravity Step v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Anchor",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Gravity Step v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Anchor",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Gravity Step v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Anchor",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Gravity Step v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Anchor (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Gravity Step v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Anchor",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Gravity Step v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Anchor",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Gravity Step v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Anchor (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Gravity Step v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G08",
+      "guardian_name": "Architect",
+      "phase": "P08_GF0",
+      "archetype": "Engineer",
+      "attribute": "Standard (🌊)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Architect",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Structure Line"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Architect",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Structure Line v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Architect",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Structure Line v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Architect",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Structure Line v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Architect",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Structure Line v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Architect",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Structure Line v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Architect",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Structure Line v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Architect",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Structure Line v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Architect",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Structure Line v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Architect (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Structure Line v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Architect",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Structure Line v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Architect",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Structure Line v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Architect (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Structure Line v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G09",
+      "guardian_name": "Builder",
+      "phase": "P09_GF-",
+      "archetype": "Implementor",
+      "attribute": "Standard (🌊)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Builder",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Quick Run"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Builder",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Quick Run v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Builder",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Quick Run v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Builder",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Quick Run v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Builder",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Quick Run v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Builder",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Quick Run v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Builder",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Quick Run v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Builder",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Quick Run v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Builder",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Quick Run v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Builder (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Quick Run v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Builder",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Quick Run v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Builder",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Quick Run v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Builder (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Quick Run v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G10",
+      "guardian_name": "Speaker",
+      "phase": "P10_HM+",
+      "archetype": "UX/Story",
+      "attribute": "Empathy (💜)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Speaker",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Heart Echo"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Speaker",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Heart Echo v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Speaker",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Heart Echo v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Speaker",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Heart Echo v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Speaker",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Heart Echo v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Speaker",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Heart Echo v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Speaker",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Heart Echo v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Speaker",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Heart Echo v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Speaker",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Heart Echo v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Speaker (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Heart Echo v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Speaker",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Heart Echo v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Speaker",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Heart Echo v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Speaker (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Heart Echo v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G11",
+      "guardian_name": "Kid",
+      "phase": "P11_HM0",
+      "archetype": "Reflector",
+      "attribute": "Empathy (💜)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Kid",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Loop Reflection"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Kid",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Loop Reflection v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Kid",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Loop Reflection v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Kid",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Loop Reflection v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Kid",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Loop Reflection v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Kid",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Loop Reflection v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Kid",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Loop Reflection v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Kid",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Loop Reflection v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Kid",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Loop Reflection v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Kid (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Loop Reflection v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Kid",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Loop Reflection v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Kid",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Loop Reflection v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Kid (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Loop Reflection v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G12",
+      "guardian_name": "Knight",
+      "phase": "P12_HM-",
+      "archetype": "Releaser",
+      "attribute": "Empathy (💜)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Knight",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Fade Shift"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Knight",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Fade Shift v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Knight",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Fade Shift v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Knight",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Fade Shift v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Knight",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Fade Shift v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Knight",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Fade Shift v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Knight",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Fade Shift v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Knight",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Fade Shift v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Knight",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Fade Shift v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Knight (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Fade Shift v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Knight",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Fade Shift v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Knight",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Fade Shift v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Knight (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Fade Shift v13"
+        }
+      ]
+    },
+    {
+      "guardian_id": "G13",
+      "guardian_name": "Deus",
+      "phase": "P13_SR0",
+      "archetype": "Rebooter",
+      "attribute": "Zero (⚪)",
+      "evolution_path": [
+        {
+          "tier": "01",
+          "tier_name": "Proto",
+          "form_name": "Proto-Deus",
+          "status": "눈을 뜨는 단계",
+          "power_level": 10,
+          "primary_skill": "Zero Pulse"
+        },
+        {
+          "tier": "02",
+          "tier_name": "Spark",
+          "form_name": "Spark-Deus",
+          "status": "기초 스킬 개방",
+          "power_level": 20,
+          "primary_skill": "Zero Pulse v02"
+        },
+        {
+          "tier": "03",
+          "tier_name": "Focus",
+          "form_name": "Focus-Deus",
+          "status": "본질적 형태 완성",
+          "power_level": 30,
+          "primary_skill": "Zero Pulse v03"
+        },
+        {
+          "tier": "04",
+          "tier_name": "Flow",
+          "form_name": "Flow-Deus",
+          "status": "능력의 흐름 안정화",
+          "power_level": 40,
+          "primary_skill": "Zero Pulse v04"
+        },
+        {
+          "tier": "05",
+          "tier_name": "Pattern",
+          "form_name": "Pattern-Deus",
+          "status": "시스템 규칙 학습",
+          "power_level": 50,
+          "primary_skill": "Zero Pulse v05"
+        },
+        {
+          "tier": "06",
+          "tier_name": "Circuit",
+          "form_name": "Circuit-Deus",
+          "status": "에너지 회로 확장",
+          "power_level": 60,
+          "primary_skill": "Zero Pulse v06"
+        },
+        {
+          "tier": "07",
+          "tier_name": "Dual",
+          "form_name": "Dual-Deus",
+          "status": "이중 위상 동시 구동",
+          "power_level": 70,
+          "primary_skill": "Zero Pulse v07"
+        },
+        {
+          "tier": "08",
+          "tier_name": "Sync",
+          "form_name": "Sync-Deus",
+          "status": "타 계열과의 연동",
+          "power_level": 80,
+          "primary_skill": "Zero Pulse v08"
+        },
+        {
+          "tier": "09",
+          "tier_name": "Matrix",
+          "form_name": "Matrix-Deus",
+          "status": "시스템 전체 관조",
+          "power_level": 90,
+          "primary_skill": "Zero Pulse v09"
+        },
+        {
+          "tier": "10",
+          "tier_name": "Core",
+          "form_name": "Core-Deus (Alpha)",
+          "status": "전문성 극의 도달",
+          "power_level": 100,
+          "primary_skill": "Zero Pulse v10"
+        },
+        {
+          "tier": "11",
+          "tier_name": "Meta",
+          "form_name": "Meta-Deus",
+          "status": "한계 돌파 및 초월",
+          "power_level": 110,
+          "primary_skill": "Zero Pulse v11"
+        },
+        {
+          "tier": "12",
+          "tier_name": "Trans",
+          "form_name": "Trans-Deus",
+          "status": "완전한 위상 전이",
+          "power_level": 120,
+          "primary_skill": "Zero Pulse v12"
+        },
+        {
+          "tier": "13",
+          "tier_name": "Origin",
+          "form_name": "Origin-Deus (Ω)",
+          "status": "영점 회귀 및 창세",
+          "power_level": 130,
+          "primary_skill": "Zero Pulse v13"
+        }
+      ]
+    }
+  ]
+}
