@@ -13,4 +13,6 @@ target/
 **/*.rs.bk
 
 # Trinity Artifacts
-# (We might want to keep artifacts, but excluding temp ones)
+# Ignored Compiled Releases
+release/
+trinity_mind_os/release/

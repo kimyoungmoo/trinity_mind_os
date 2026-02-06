@@ -1,11 +1,10 @@
 #![allow(non_camel_case_types)]
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
 use uuid::Uuid;
 use chrono::{DateTime, Utc};
 
 // 1. Tesseract State (4D Coordinate)
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone, Default)]
 pub struct TesseractState {
     pub ce: f32, // Creative Energy (Ignition)
     pub aq: f32, // Active Quantum (Execution)
@@ -32,12 +31,13 @@ pub struct HexadCoupling {
 }
 
 // 3. 13 Phases (Time Orbit)
-#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Default)]
 pub enum Phase {
     CE_Plus, CE_Zero, CE_Minus,
     AQ_Plus, AQ_Zero, AQ_Minus,
     GF_Plus, GF_Zero, GF_Minus,
     HM_Plus, HM_Zero, HM_Minus,
+    #[default]
     SR0_Commit,
 }
 
@@ -126,18 +126,18 @@ impl PhaseDetector {
 
     pub fn phase_to_string(phase: &Phase) -> String {
         match phase {
-            Phase::CE_Plus => "CE+ (Ignition)".to_string(),
-            Phase::CE_Zero => "CE° (Definition)".to_string(),
-            Phase::CE_Minus => "CE- (Reduction)".to_string(),
-            Phase::AQ_Plus => "AQ+ (Action)".to_string(),
-            Phase::AQ_Zero => "AQ° (Flow)".to_string(),
-            Phase::AQ_Minus => "AQ- (Debug)".to_string(),
-            Phase::GF_Plus => "GF+ (Blueprint)".to_string(),
-            Phase::GF_Zero => "GF° (Normalize)".to_string(),
-            Phase::GF_Minus => "GF- (Guardrail)".to_string(),
-            Phase::HM_Plus => "HM+ (Narrative)".to_string(),
-            Phase::HM_Zero => "HM° (Meaning)".to_string(),
-            Phase::HM_Minus => "HM- (Proof)".to_string(),
+            Phase::CE_Plus => "CE⁺ (Creative Force)".to_string(),
+            Phase::CE_Zero => "CE⁰ (Creative Energy)".to_string(),
+            Phase::CE_Minus => "CE⁻ (Energy Flow)".to_string(),
+            Phase::AQ_Plus => "AQ⁺ (Energy Flow)".to_string(),
+            Phase::AQ_Zero => "AQ⁰ (Active Quantum)".to_string(),
+            Phase::AQ_Minus => "AQ⁻ (Quantum Map)".to_string(),
+            Phase::GF_Plus => "GF⁺ (Gravity Link)".to_string(),
+            Phase::GF_Zero => "GF⁰ (Gravity Field)".to_string(),
+            Phase::GF_Minus => "GF⁻ (Field Core)".to_string(),
+            Phase::HM_Plus => "HM⁺ (Heart Sense)".to_string(),
+            Phase::HM_Zero => "HM⁰ (Heart-Mind)".to_string(),
+            Phase::HM_Minus => "HM⁻ (Mind Logic)".to_string(),
             Phase::SR0_Commit => "SR₀ (Genesis)".to_string(),
         }
     }

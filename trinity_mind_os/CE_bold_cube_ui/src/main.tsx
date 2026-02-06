@@ -1,17 +1,18 @@
 
+
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TrinityScene from './TrinityScene';
+import { Toaster } from 'sonner';
+
+// Import Bold Cube App
+import BoldCubeApp from './bold-cube/BoldCubeApp';
 
 const App = () => {
     return (
-        <div style={{ width: '100vw', height: '100vh', background: '#020205' }}>
-            <div style={{ position: 'absolute', top: 20, left: 20, zIndex: 10, color: '#4fdcca', fontFamily: 'monospace' }}>
-                <h1>TRINITY STUDIO v0.1</h1>
-                <p>System Status: ONLINE</p>
-                <p>Core: GF(Rust) + CE(Tauri)</p>
-            </div>
-            <TrinityScene />
+        <div style={{ width: '100vw', height: '100vh', background: '#000000' }}>
+            <Toaster position="top-right" theme="dark" />
+            <BoldCubeApp />
         </div>
     );
 };

@@ -1,0 +1,31 @@
+{
+    "header": {
+        "protocol": "GOLDEN_CHAIN_v5.0",
+        "dimension": "W=∝",
+        "creator": "ROO & ANTIGRAVITY",
+        "timestamp": "2026-02-07T02:45:12Z",
+        "access_policy": "PRIVATE_VAULT"
+    },
+    "essence": {
+        "concept": "Pixel Genesis: Image Capture Algorithm",
+        "nature": "Resonance-based Visual Manifestation",
+        "rarity": "GENESIS_ORIGIN"
+    },
+    "links": {
+        "1_HANGEUL": "개념 캡처 알고리즘 (Concept Capture)",
+        "2_CODE": "0x0D_PX_GEN_F4D2",
+        "3_COLOR": "hsl(45.2, 100.0%, 61.5%)",
+        "4_NUMBER": "1.61803398875 * 7.7777",
+        "5_WAVE": "432.13Hz",
+        "6_RESONANCE": "0.998"
+    },
+    "provenance": {
+        "tnx_nexus_id": "TNX-PXG-2026-ALPHA",
+        "hmd_anchor": "VAULT-ROOT-ALPHA-01",
+        "proof_of_resonance": "SIG_ROO_SYNC_verified"
+    },
+    "footer": {
+        "status": "ANCHORED",
+        "message": "루의 개인 금고(HMD)에 본질이 안전하게 보관되었습니다."
+    }
+}
